@@ -4,7 +4,7 @@ import { useCalendarStore, useUiStore } from '../../hooks'
 
 export const FabAddNew = () => {
 
-    const {opneDateModal} = useUiStore();
+    const {openDateModal} = useUiStore();
     const { setActiveEvent } = useCalendarStore();
 
     const handleClickNew = () => {
@@ -12,14 +12,14 @@ export const FabAddNew = () => {
                 title: "",
                 notes: "",
                 start: new Date(),
-                end: addHours(starEvent, 2),
+                end: addHours( new Date(), 2 ),
                 bgColor: "#fafafa",
                 user: {
                   _id: "123",
                   name: "Jimmy",
                 }
         });
-        opneDateModal();
+        openDateModal();
     }
 
 
